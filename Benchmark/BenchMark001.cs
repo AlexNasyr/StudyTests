@@ -14,6 +14,7 @@ namespace Benchmark {
                 list.Add(i);
             }
         }
+
         [Benchmark]
         public void TryTraditionalForeach() {
             var result = foreachTesting.TraditionalForeach(list);
