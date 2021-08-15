@@ -1,9 +1,9 @@
 ﻿using BenchmarkDotNet.Running;
 
-namespace Benchmark {
+namespace Benchmarks {
     class Program {
         static void Main(string[] args) {
-            BenchmarkRunner.Run<BenchMark001>();
+            BenchmarkRunner.Run<BenchMark002>();
         }
     }
 }

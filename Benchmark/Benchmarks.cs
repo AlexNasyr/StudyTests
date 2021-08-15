@@ -2,11 +2,11 @@
 using BenchmarkDotNet.Attributes;
 using StudyTests;
 
-namespace Benchmark {
+namespace Benchmarks {
+
     [MemoryDiagnoser]
     [RankColumn]
     public class BenchMark001 {
-
         public List<int> list;
         public BenchMark001() {
             list = new();
@@ -22,6 +22,19 @@ namespace Benchmark {
         [Benchmark]
         public void TryYieldForeach() {
             var result = foreachTesting.YieldForeach(list);
+        }
+    }
+
+    [MemoryDiagnoser]
+    [RankColumn]
+    public class BenchMark002 {
+        [Benchmark]
+        public void ExplicitBenckmark() {
+            var result = CastTesting.ExplicitCast(10.2);
+        }
+        [Benchmark]
+        public void ConvertBenckmark() {
+            var result = CastTesting.ConvertCast(10.2);
         }
     }
 }
